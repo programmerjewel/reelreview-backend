@@ -30,7 +30,7 @@ async function run() {
     });
 
 
-    //single movie
+    //single movie endpoint by id
     app.get('/movies/:id', async (req, res) => {
       try {
         const id = req.params.id;
@@ -49,6 +49,13 @@ async function run() {
       }
     });
 
+
+    app.delete('/movies/:id', async(req, res) =>{
+      const id = req.params.id;
+      const query = {_id : new ObjectId(id)}
+      const result = await movieCollection.deleteOne(query);
+      res.send(result);
+    })
 
     // Featured movies endpoint (top 6 by rating)
     app.get('/featuredmovies', async (req, res) => {
