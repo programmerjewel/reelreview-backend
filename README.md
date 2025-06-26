@@ -1,6 +1,6 @@
 # ReelReview - Backend
 
-The backend service for ReelReview, a movie review platform, providing RESTful API endpoints for movie data and user management.
+The backend service for ReelReview, a movie review platform, providing RESTful API endpoints for movie data management.
 
 ## Features
 
